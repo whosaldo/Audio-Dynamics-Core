@@ -1,16 +1,20 @@
 import { motion } from "motion/react";
 import { Speaker, Music, Mic, Radio } from "lucide-react";
-
-const equipment = [
-  { name: "Mixer digital x32 Compact", icon: Radio },
-  { name: "Mixer digital x32 Rack", icon: Radio },
-  { name: "Digital Stagebox Behringer SD8", icon: Radio },
-  { name: "2x Sistem HK Polar 12", icon: Speaker },
-  { name: "Subwoofer activ The Box TA18", icon: Speaker },
-  { name: "Microfoane Shure SM58", icon: Mic },
-];
+import { useLanguage } from "../LanguageContext";
 
 export default function Equipment() {
+  const { t } = useLanguage();
+
+  const equipment = [
+    { name: "Mixer digital x32 Compact", icon: Radio },
+    { name: "Mixer digital x32 Rack", icon: Radio },
+    { name: "Digital Stagebox Behringer SD8", icon: Radio },
+    { name: "2x Sistem HK Polar 12", icon: Speaker },
+    { name: "Subwoofer activ The Box TA18", icon: Speaker },
+    { name: "Microfoane Shure SM58", icon: Mic },
+    { name: t('equipment.more'), icon: Music },
+  ];
+
   return (
     <section id="echipament" className="py-20 md:py-32 px-6 relative overflow-hidden">
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-accent/5 blur-[80px] md:blur-[100px] rounded-full -z-10" />
@@ -24,7 +28,7 @@ export default function Equipment() {
               viewport={{ once: true }}
               className="text-accent text-xs md:text-sm font-mono tracking-[0.2em] uppercase"
             >
-              Tehnologie de ultimă oră
+              {t('equipment.badge')}
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, x: -20 }}
@@ -33,7 +37,7 @@ export default function Equipment() {
               transition={{ delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white"
             >
-              Echipamentul nostru
+              {t('equipment.title')}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, x: -20 }}
@@ -42,8 +46,8 @@ export default function Equipment() {
               transition={{ delay: 0.2 }}
               className="text-gray-400 text-base md:text-lg font-light leading-relaxed"
             >
-              Dispunem de o gamă largă de echipament, capabile de până la <span className="text-white font-bold">300-500 persoane</span>. 
-              Folosim doar branduri de top pentru a asigura fiabilitatea.
+              {t('equipment.subtitle')} <span className="text-white font-bold">{t('equipment.capacity')}</span>
+              {t('equipment.subtitle2')}
             </motion.p>
           </div>
           
@@ -58,7 +62,7 @@ export default function Equipment() {
             </div>
             <div>
               <div className="text-xl md:text-2xl font-black text-white">300-500</div>
-              <div className="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest">Capacitate Persoane</div>
+              <div className="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest">{t('equipment.cap_label')}</div>
             </div>
           </motion.div>
         </div>

@@ -1,30 +1,33 @@
 import { motion } from "motion/react";
 import { Users, Radio, Mic2, MessageSquare } from "lucide-react";
-
-const qualities = [
-  {
-    title: "Consultanță Pre-Eveniment",
-    description: "Analizăm nevoile reale ale evenimentului și oferim consultanță specializată pentru a alege configurația optimă.",
-    icon: MessageSquare,
-  },
-  {
-    title: "Parteneriat cu Artiștii și Trupele",
-    description: "Suntem interfața tehnică perfectă între tine și artiști. Cunoaștem limbajul tehnic și nevoile trupelor.",
-    icon: Users,
-  },
-  {
-    title: "Servicii de Streaming Live",
-    description: "Oferim mai mult decât sunet live; oferim posibilitatea de a transmite momentul sau de a înregistra multitrack.",
-    icon: Radio,
-  },
-  {
-    title: "Ingineri de sunet dedicați",
-    description: "Asigurăm un sunet clar care se aude bine atât în difuzoarele din sală, cât și în transmisiunile online.",
-    icon: Mic2,
-  },
-];
+import { useLanguage } from "../LanguageContext";
 
 export default function Qualities() {
+  const { t } = useLanguage();
+
+  const qualities = [
+    {
+      title: t('qualities.q1_title'),
+      description: t('qualities.q1_desc'),
+      icon: MessageSquare,
+    },
+    {
+      title: t('qualities.q2_title'),
+      description: t('qualities.q2_desc'),
+      icon: Users,
+    },
+    {
+      title: t('qualities.q3_title'),
+      description: t('qualities.q3_desc'),
+      icon: Radio,
+    },
+    {
+      title: t('qualities.q4_title'),
+      description: t('qualities.q4_desc'),
+      icon: Mic2,
+    },
+  ];
+
   return (
     <section id="calitati" className="py-20 md:py-32 px-6 bg-charcoal/30">
       <div className="max-w-7xl mx-auto space-y-12 md:space-y-20">
@@ -35,7 +38,7 @@ export default function Qualities() {
             viewport={{ once: true }}
             className="text-accent text-xs md:text-sm font-mono tracking-[0.2em] uppercase"
           >
-            De ce noi?
+            {t('qualities.badge')}
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -44,7 +47,7 @@ export default function Qualities() {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white"
           >
-            Calitățile noastre
+            {t('qualities.title')}
           </motion.h2>
         </div>
         

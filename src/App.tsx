@@ -1,7 +1,10 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Qualities from "./components/Qualities";
+import Services from "./components/Services";
 import Equipment from "./components/Equipment";
+import InstagramPromo from "./components/InstagramPromo";
+import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
 import AnimatedBackground from "./components/AnimatedBackground";
 
@@ -12,8 +15,11 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Services />
         <Qualities />
         <Equipment />
+        <InstagramPromo />
+        <CallToAction />
       </main>
       <Footer />
     </div>

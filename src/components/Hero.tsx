@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ChevronDown } from "lucide-react";
+import { useLanguage } from "../LanguageContext";
 
 const Equalizer = () => {
   // Generate random heights for the equalizer bars
@@ -34,6 +35,8 @@ const Equalizer = () => {
 };
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-28 pb-20 px-4 sm:px-6 overflow-hidden">
       {/* Animated Background Glow */}
@@ -57,7 +60,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="inline-block px-4 py-1.5 md:py-2 rounded-full glass border border-accent/30 text-accent text-xs md:text-sm font-mono tracking-[0.15em] md:tracking-[0.2em] uppercase shadow-[0_0_15px_rgba(176,38,255,0.2)]"
         >
-          Sonorizare Profesională 2026
+          {t('hero.badge')}
         </motion.div>
         
         <motion.h1
@@ -66,8 +69,8 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 100 }}
           className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-tight md:leading-[0.9] text-gradient px-2"
         >
-          Sunetul din spatele <br className="hidden sm:block" />
-          <span className="text-accent drop-shadow-[0_0_25px_rgba(176,38,255,0.5)]">succesului tău.</span>
+          {t('hero.title1')} <br className="hidden sm:block" />
+          <span className="text-accent drop-shadow-[0_0_25px_rgba(176,38,255,0.5)]">{t('hero.title2')}</span>
         </motion.h1>
         
         <motion.p
@@ -76,8 +79,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 font-light leading-relaxed px-4 sm:px-0"
         >
-          Transformăm orice eveniment într-o experiență acustică impecabilă. 
-          Oferim soluții complete de sonorizare live pentru concerte, conferințe și evenimente private.
+          {t('hero.subtitle')}
         </motion.p>
         
         <motion.div
@@ -87,10 +89,10 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 md:pt-8 w-full px-4 sm:px-0"
         >
           <a href="#contact" className="w-full sm:w-auto px-8 py-4 bg-accent text-white rounded-full font-bold text-base md:text-lg hover:bg-accent-hover transition-all accent-glow hover:scale-105 active:scale-95 text-center">
-            Cere Ofertă
+            {t('hero.quote')}
           </a>
-          <a href="#calitati" className="w-full sm:w-auto px-8 py-4 glass border border-white/10 rounded-full font-bold text-base md:text-lg hover:bg-white/10 hover:border-accent/50 transition-all hover:scale-105 active:scale-95 text-center">
-            Vezi Servicii
+          <a href="#servicii" className="w-full sm:w-auto px-8 py-4 glass border border-white/10 rounded-full font-bold text-base md:text-lg hover:bg-white/10 hover:border-accent/50 transition-all hover:scale-105 active:scale-95 text-center">
+            {t('hero.services')}
           </a>
         </motion.div>
       </div>

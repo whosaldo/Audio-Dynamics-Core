@@ -1,9 +1,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
+import { useLanguage } from "../LanguageContext";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'ro' ? 'en' : 'ro');
+  };
 
   return (
     <>
@@ -13,10 +19,20 @@ export default function Navbar() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 glass border-b border-white/5"
       >
-        {/* Left Side: Navigation Links (Desktop) */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest uppercase flex-1">
-          <a href="#calitati" className="hover:text-accent transition-colors">Calități</a>
-          <a href="#echipament" className="hover:text-accent transition-colors">Echipament</a>
+        {/* Left Side: Navigation Links (Desktop) & Mobile Lang Toggle */}
+        <div className="flex items-center gap-4 md:gap-8 text-sm font-medium tracking-widest uppercase flex-1">
+          <button 
+            onClick={toggleLanguage}
+            className="md:hidden flex items-center gap-2 px-3 py-1.5 glass border border-white/10 rounded-full hover:bg-white/10 transition-colors text-xs font-bold uppercase tracking-widest"
+          >
+            <Globe className="w-4 h-4" />
+            {language}
+          </button>
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#calitati" className="hover:text-accent transition-colors">{t('nav.qualities')}</a>
+            <a href="#servicii" className="hover:text-accent transition-colors">{t('nav.services')}</a>
+            <a href="#echipament" className="hover:text-accent transition-colors">{t('nav.equipment')}</a>
+          </div>
         </div>
 
         {/* Center: Logo */}
@@ -33,8 +49,15 @@ export default function Navbar() {
         
         {/* Right Side: Contact Button & Mobile Toggle */}
         <div className="flex items-center justify-end gap-4 flex-1">
+          <button 
+            onClick={toggleLanguage}
+            className="hidden md:flex items-center gap-2 px-3 py-1.5 glass border border-white/10 rounded-full hover:bg-white/10 transition-colors text-xs font-bold uppercase tracking-widest"
+          >
+            <Globe className="w-4 h-4" />
+            {language}
+          </button>
           <a href="#contact" className="hidden md:block px-5 py-2 bg-accent text-white rounded-full hover:bg-accent-hover transition-all font-bold accent-glow">
-            Contact
+            {t('nav.contact')}
           </a>
           <button 
             className="md:hidden p-2 text-white hover:text-accent transition-colors"
@@ -55,9 +78,10 @@ export default function Navbar() {
             className="fixed inset-0 z-40 bg-deep-black/95 backdrop-blur-xl pt-24 px-6 flex flex-col gap-8 md:hidden"
           >
             <div className="flex flex-col gap-6 text-xl font-medium tracking-widest uppercase">
-              <a href="#calitati" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">Calități</a>
-              <a href="#echipament" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">Echipament</a>
-              <a href="#contact" onClick={() => setIsOpen(false)} className="text-accent hover:text-accent-hover transition-colors">Contact</a>
+              <a href="#calitati" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">{t('nav.qualities')}</a>
+              <a href="#servicii" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">{t('nav.services')}</a>
+              <a href="#echipament" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">{t('nav.equipment')}</a>
+              <a href="#contact" onClick={() => setIsOpen(false)} className="text-accent hover:text-accent-hover transition-colors">{t('nav.contact')}</a>
             </div>
           </motion.div>
         )}
