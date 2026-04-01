@@ -86,12 +86,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 md:pt-8 w-full px-4 sm:px-0"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 md:pt-8 w-full px-4 sm:px-0"
         >
-          <a href="#contact" className="w-full sm:w-auto px-8 py-4 bg-accent text-white rounded-full font-bold text-base md:text-lg hover:bg-accent-hover transition-all accent-glow hover:scale-105 active:scale-95 text-center">
+          <a href="#contact-box" className="w-full max-w-[220px] sm:max-w-none sm:w-auto px-5 py-2.5 sm:px-8 sm:py-4 bg-accent text-white rounded-full font-bold text-sm sm:text-base md:text-lg hover:bg-accent-hover transition-all accent-glow hover:scale-105 active:scale-95 text-center">
             {t('hero.quote')}
           </a>
-          <a href="#servicii" className="w-full sm:w-auto px-8 py-4 glass border border-white/10 rounded-full font-bold text-base md:text-lg hover:bg-white/10 hover:border-accent/50 transition-all hover:scale-105 active:scale-95 text-center">
+          <a href="#servicii" className="w-full max-w-[220px] sm:max-w-none sm:w-auto px-5 py-2.5 sm:px-8 sm:py-4 glass border border-white/10 rounded-full font-bold text-sm sm:text-base md:text-lg hover:bg-white/10 hover:border-accent/50 transition-all hover:scale-105 active:scale-95 text-center">
             {t('hero.services')}
           </a>
         </motion.div>
