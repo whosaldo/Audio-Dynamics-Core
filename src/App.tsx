@@ -5,6 +5,7 @@ import Services from "./components/Services";
 import Equipment from "./components/Equipment";
 import InstagramPromo from "./components/InstagramPromo";
 import CallToAction from "./components/CallToAction";
+import ContactBox from "./components/ContactBox";
 import Footer from "./components/Footer";
 import AnimatedBackground from "./components/AnimatedBackground";
 
@@ -20,6 +21,7 @@ export default function App() {
         <Equipment />
         <InstagramPromo />
         <CallToAction />
+        <ContactBox />
       </main>
       <Footer />
     </div>

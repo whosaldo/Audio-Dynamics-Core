@@ -60,6 +60,12 @@ export const translations = {
       quote: "Cere o ofertă",
       call: "Sună-ne acum"
     },
+    contact_box: {
+      title: "Contactează-ne",
+      email_label: "Trimite-ne un email",
+      phone_label: "Sună-ne",
+      location_label: "Locație"
+    },
     footer: {
       desc: "Transformăm orice eveniment într-o experiență acustică impecabilă. Calitatea sunetului este prioritatea noastră.",
       contact: "Contact",
@@ -130,6 +136,12 @@ export const translations = {
       subtitle: "Let us handle the technical side while you enjoy the event. Contact us for a personalized quote.",
       quote: "Request a quote",
       call: "Call us now"
+    },
+    contact_box: {
+      title: "Contact us",
+      email_label: "Send us an email",
+      phone_label: "Call us",
+      location_label: "Location"
     },
     footer: {
       desc: "We transform any event into a flawless acoustic experience. Sound quality is our priority.",

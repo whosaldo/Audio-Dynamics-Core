@@ -31,7 +31,7 @@ export default function Footer() {
           <ul className="space-y-3 md:space-y-4 text-gray-500 font-light text-sm md:text-base w-full">
             <li className="flex items-center justify-center md:justify-start gap-3 hover:text-accent transition-colors cursor-pointer">
               <Mail className="w-4 h-4 md:w-5 md:h-5 text-accent shrink-0" />
-              <span className="break-all">contact@audiodynamics.ro</span>
+              <span className="break-all">contact@audio-dynamics-core.ro</span>
             </li>
             <li className="flex items-center justify-center md:justify-start gap-3 hover:text-accent transition-colors cursor-pointer">
               <Phone className="w-4 h-4 md:w-5 md:h-5 text-accent shrink-0" />
