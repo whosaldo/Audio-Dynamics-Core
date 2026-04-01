@@ -9,6 +9,7 @@ import ContactBox from "./components/ContactBox";
 import Footer from "./components/Footer";
 import AnimatedBackground from "./components/AnimatedBackground";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
       </main>
       <Footer />
       <SpeedInsights />
+      <Analytics />
     </div>
   );
 }
