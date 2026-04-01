@@ -10,9 +10,10 @@ export default function Footer() {
         <div className="space-y-5 md:space-y-6 flex flex-col items-center md:items-start">
           <div className="flex flex-col items-center md:items-start gap-4">
             <img 
-              src="/logo.png" 
+              src="https://i.postimg.cc/bYG3mCQW/logo-(1).png" 
               alt="Audio Dynamics Core Logo" 
               className="h-16 md:h-24 object-contain drop-shadow-[0_0_15px_rgba(176,38,255,0.3)] transition-all hover:scale-105"
+              referrerPolicy="no-referrer"
             />
           </div>
           <p className="text-gray-500 font-light leading-relaxed max-w-xs text-sm md:text-base">
