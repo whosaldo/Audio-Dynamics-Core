@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
