@@ -56,7 +56,7 @@ export default function Navbar() {
             <Globe className="w-4 h-4" />
             {language}
           </button>
-          <a href="#contact" className="hidden md:block px-5 py-2 bg-accent text-white rounded-full hover:bg-accent-hover transition-all font-bold accent-glow">
+          <a href="#contact-box" className="hidden md:block px-5 py-2 bg-accent text-white rounded-full hover:bg-accent-hover transition-all font-bold accent-glow">
             {t('nav.contact')}
           </a>
           <button 
@@ -81,7 +81,7 @@ export default function Navbar() {
               <a href="#calitati" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">{t('nav.qualities')}</a>
               <a href="#servicii" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">{t('nav.services')}</a>
               <a href="#echipament" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">{t('nav.equipment')}</a>
-              <a href="#contact" onClick={() => setIsOpen(false)} className="text-accent hover:text-accent-hover transition-colors">{t('nav.contact')}</a>
+              <a href="#contact-box" onClick={() => setIsOpen(false)} className="text-accent hover:text-accent-hover transition-colors">{t('nav.contact')}</a>
             </div>
           </motion.div>
         )}

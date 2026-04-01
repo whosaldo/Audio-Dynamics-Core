@@ -26,16 +26,10 @@ export default function CallToAction() {
             </p>
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a 
-                href="#contact" 
+                href="#contact-box" 
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-accent-hover transition-all hover:scale-105 accent-glow text-base md:text-lg w-full sm:w-auto"
               >
                 {t('cta.quote')} <ArrowRight className="w-5 h-5" />
-              </a>
-              <a 
-                href="tel:+40753792339" 
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 glass text-white font-bold rounded-full hover:bg-white/10 transition-all text-base md:text-lg w-full sm:w-auto border border-white/10"
-              >
-                {t('cta.call')}
               </a>
             </div>
           </div>
