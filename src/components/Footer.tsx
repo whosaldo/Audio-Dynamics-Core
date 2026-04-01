@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "./logo.png";
 
 export default function Footer() {
   return (
@@ -11,7 +10,7 @@ export default function Footer() {
         <div className="space-y-5 md:space-y-6 flex flex-col items-center md:items-start">
           <div className="flex flex-col items-center md:items-start gap-4">
             <img 
-              src={logo} 
+              src="/logo.png" 
               alt="Audio Dynamics Core Logo" 
               className="h-16 md:h-24 object-contain drop-shadow-[0_0_15px_rgba(176,38,255,0.3)] transition-all hover:scale-105"
             />
