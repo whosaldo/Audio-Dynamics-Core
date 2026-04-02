@@ -45,6 +45,8 @@ export default function InstagramPromo() {
               <img 
                 src={`https://picsum.photos/seed/audio${item + 10}/400/400`} 
                 alt="Instagram preview" 
+                width={400}
+                height={400}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 referrerPolicy="no-referrer"
               />

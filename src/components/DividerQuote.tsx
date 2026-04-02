@@ -6,7 +6,7 @@ export default function DividerQuote() {
   const items = Array.from({ length: 6 });
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden flex flex-col items-center justify-center w-full">
+    <section className="py-16 md:py-24 relative overflow-hidden flex flex-col items-center justify-center w-full min-h-[250px] md:min-h-[350px]">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-full h-[250px] bg-accent/10 blur-[100px] -z-10 pointer-events-none" />
 
