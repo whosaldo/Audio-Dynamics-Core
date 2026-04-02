@@ -8,6 +8,14 @@
   --color-deep-black: #0a0a0a;
   --color-accent: #b026ff;
   --color-accent-hover: #9010e0;
+
+  --animate-marquee: marquee 45s linear infinite;
+  --animate-marquee-slow: marquee 55s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
 }
 
 @layer base {

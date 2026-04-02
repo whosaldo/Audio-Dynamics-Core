@@ -16,7 +16,7 @@ const Equalizer = () => {
         {bars.map((bar) => (
           <motion.div
             key={bar.id}
-            className="flex-1 bg-gradient-to-t from-accent/80 via-accent/40 to-transparent rounded-t-full origin-bottom will-change-transform"
+            className="flex-1 bg-gradient-to-t from-accent/80 via-accent/40 to-transparent rounded-t-full origin-bottom"
             style={{ height: "100%" }}
             animate={{
               scaleY: [0.1, 0.8, 0.3, 1, 0.2],

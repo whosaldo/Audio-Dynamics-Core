@@ -68,7 +68,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
-              className="glass p-8 md:p-10 rounded-3xl border border-white/5 hover:border-accent/30 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(176,38,255,0.1)] transition-all duration-300 group will-change-transform"
+              className="glass p-8 md:p-10 rounded-3xl border border-white/5 hover:border-accent/30 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(176,38,255,0.1)] transition-all duration-300 group"
             >
               <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-accent transition-all duration-300">
                 <service.icon className="w-7 h-7 text-accent group-hover:text-white transition-colors duration-300" />

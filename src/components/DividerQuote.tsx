@@ -15,11 +15,7 @@ export default function DividerQuote() {
         
         {/* Row 1 - Moving Left (Solid & Gradient) */}
         <div className="flex overflow-hidden glass border-y border-white/10 py-4 md:py-6 shadow-[0_0_30px_rgba(176,38,255,0.1)]">
-          <motion.div
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 45 }}
-            className="flex whitespace-nowrap w-max will-change-transform"
-          >
+          <div className="flex whitespace-nowrap w-max animate-marquee">
             {/* Two identical halves for a seamless loop */}
             {[1, 2].map((half) => (
               <div key={half} className="flex items-center">
@@ -33,16 +29,12 @@ export default function DividerQuote() {
                 ))}
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         {/* Row 2 - Moving Right (Outlined/Stroke) */}
         <div className="flex overflow-hidden py-2">
-          <motion.div
-            animate={{ x: ["-50%", "0%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 55 }}
-            className="flex whitespace-nowrap w-max will-change-transform"
-          >
+          <div className="flex whitespace-nowrap w-max animate-marquee-slow" style={{ animationDirection: 'reverse' }}>
             {[1, 2].map((half) => (
               <div key={half} className="flex items-center">
                 {items.map((_, i) => (
@@ -58,7 +50,7 @@ export default function DividerQuote() {
                 ))}
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
       </div>
