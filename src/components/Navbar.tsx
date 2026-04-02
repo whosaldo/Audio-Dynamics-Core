@@ -17,7 +17,7 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 glass border-b border-white/5"
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-deep-black/60 backdrop-blur-xl border-b border-white/5 shadow-lg transition-all duration-500"
       >
         {/* Left Side: Navigation Links (Desktop) & Mobile Lang Toggle */}
         <div className="flex items-center gap-4 md:gap-8 text-sm font-medium tracking-widest uppercase flex-1">
@@ -43,6 +43,8 @@ export default function Navbar() {
               alt="Audio Dynamics Core Logo" 
               width={160}
               height={64}
+              fetchPriority="high"
+              loading="eager"
               className="h-12 sm:h-16 w-auto object-contain drop-shadow-[0_0_10px_rgba(176,38,255,0.2)]"
               referrerPolicy="no-referrer"
             />
@@ -74,10 +76,11 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-deep-black/95 backdrop-blur-xl pt-24 px-6 flex flex-col gap-8 md:hidden"
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="fixed inset-0 z-40 bg-deep-black/95 backdrop-blur-2xl pt-24 px-6 flex flex-col gap-8 md:hidden will-change-transform"
           >
             <div className="flex flex-col gap-6 text-xl font-medium tracking-widest uppercase">
               <a href="#calitati" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">{t('nav.qualities')}</a>

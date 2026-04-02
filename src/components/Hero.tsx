@@ -56,19 +56,19 @@ export default function Hero() {
       
       <div className="max-w-5xl w-full text-center space-y-8 md:space-y-10 z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0.01, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="inline-block px-4 py-1.5 md:py-2 rounded-full glass border border-accent/30 text-accent text-xs md:text-sm font-mono tracking-[0.15em] md:tracking-[0.2em] uppercase shadow-[0_0_15px_rgba(176,38,255,0.2)]"
+          transition={{ duration: 0.4 }}
+          className="inline-block px-4 py-1.5 md:py-2 rounded-full glass border border-accent/30 text-accent text-xs md:text-sm font-mono tracking-[0.15em] md:tracking-[0.2em] uppercase shadow-[0_0_15px_rgba(176,38,255,0.2)] will-change-transform"
         >
           {t('hero.badge')}
         </motion.div>
         
         <motion.h1
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0.01, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 100 }}
-          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-tight md:leading-[0.9] text-gradient px-2"
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-tight md:leading-[0.9] text-gradient px-2 will-change-transform"
         >
           {t('hero.title1')} <br className="hidden sm:block" />
           <span className="text-accent drop-shadow-[0_0_25px_rgba(176,38,255,0.5)]">{t('hero.title2')}</span>

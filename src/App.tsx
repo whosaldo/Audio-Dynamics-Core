@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Qualities from "./components/Qualities";
 import Services from "./components/Services";
+import DividerQuote from "./components/DividerQuote";
+import SectionTransition from "./components/SectionTransition";
 import Equipment from "./components/Equipment";
 import InstagramPromo from "./components/InstagramPromo";
 import CallToAction from "./components/CallToAction";
@@ -19,6 +21,8 @@ export default function App() {
       <main>
         <Hero />
         <Services />
+        <DividerQuote />
+        <SectionTransition />
         <Qualities />
         <Equipment />
         <InstagramPromo />
