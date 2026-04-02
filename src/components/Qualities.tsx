@@ -59,7 +59,7 @@ export default function Qualities() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-6 md:p-8 glass border border-white/5 rounded-3xl hover:border-accent/30 transition-all group"
+              className="p-6 md:p-8 glass border border-white/5 rounded-3xl hover:border-accent/30 transition-all group will-change-transform"
             >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-all">
                 <quality.icon className="w-6 h-6 md:w-7 md:h-7" />

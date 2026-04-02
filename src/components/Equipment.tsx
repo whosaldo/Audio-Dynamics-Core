@@ -17,7 +17,7 @@ export default function Equipment() {
 
   return (
     <section id="echipament" className="py-20 md:py-32 px-6 relative overflow-hidden">
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-accent/5 blur-[80px] md:blur-[100px] rounded-full -z-10" />
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-accent/5 blur-[80px] md:blur-[100px] rounded-full -z-10 will-change-transform" />
       
       <div className="max-w-7xl mx-auto space-y-12 md:space-y-20">
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8">
@@ -55,7 +55,7 @@ export default function Equipment() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="w-full lg:w-auto px-6 py-5 md:px-8 md:py-6 glass border border-white/5 rounded-3xl flex items-center gap-5 md:gap-6"
+            className="w-full lg:w-auto px-6 py-5 md:px-8 md:py-6 glass border border-white/5 rounded-3xl flex items-center gap-5 md:gap-6 will-change-transform"
           >
             <div className="w-10 h-10 md:w-12 md:h-12 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
               <Music className="text-accent w-5 h-5 md:w-6 md:h-6" />
@@ -75,7 +75,7 @@ export default function Equipment() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="px-4 py-3 md:px-6 md:py-4 glass border border-white/5 rounded-2xl flex items-center gap-3 md:gap-4 hover:border-accent/30 transition-all group cursor-default w-full sm:w-auto"
+              className="px-4 py-3 md:px-6 md:py-4 glass border border-white/5 rounded-2xl flex items-center gap-3 md:gap-4 hover:border-accent/30 transition-all group cursor-default w-full sm:w-auto will-change-transform"
             >
               <item.icon className="w-4 h-4 md:w-5 md:h-5 text-gray-500 group-hover:text-accent transition-colors shrink-0" />
               <span className="text-sm md:text-base text-white font-medium tracking-tight">{item.name}</span>
