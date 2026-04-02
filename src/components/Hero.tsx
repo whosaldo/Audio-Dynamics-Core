@@ -16,9 +16,10 @@ const Equalizer = () => {
         {bars.map((bar) => (
           <motion.div
             key={bar.id}
-            className="flex-1 bg-gradient-to-t from-accent/80 via-accent/40 to-transparent rounded-t-full"
+            className="flex-1 bg-gradient-to-t from-accent/80 via-accent/40 to-transparent rounded-t-full origin-bottom will-change-transform"
+            style={{ height: "100%" }}
             animate={{
-              height: ["10%", "80%", "30%", "100%", "20%"],
+              scaleY: [0.1, 0.8, 0.3, 1, 0.2],
             }}
             transition={{
               duration: bar.duration,
@@ -47,7 +48,7 @@ export default function Hero() {
           rotate: [0, 90, 0]
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-accent/20 blur-[100px] md:blur-[120px] rounded-full -z-20 pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-accent/20 blur-[100px] md:blur-[120px] rounded-full -z-20 pointer-events-none will-change-transform"
       />
       
       {/* Audio Equalizer Effect */}

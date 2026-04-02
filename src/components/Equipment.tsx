@@ -6,8 +6,8 @@ export default function Equipment() {
   const { t } = useLanguage();
 
   const equipment = [
-    { name: "Mixer digital x32 Compact", icon: Radio },
-    { name: "Mixer digital x32 Rack", icon: Radio },
+    { name: "Mixer digital Behringer x32 Compact", icon: Radio },
+    { name: "Mixer digital Behringer x32 Rack", icon: Radio },
     { name: "Digital Stagebox Behringer SD8", icon: Radio },
     { name: "2x Sistem HK Polar 12", icon: Speaker },
     { name: "Subwoofer activ The Box TA18", icon: Speaker },

@@ -37,11 +37,13 @@ export default function Navbar() {
 
         {/* Center: Logo */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <a href="#" className="h-12 sm:h-16 w-auto flex items-center transition-transform hover:scale-105">
+          <a href="#" className="flex items-center transition-transform hover:scale-105">
             <img 
               src="https://i.postimg.cc/bYG3mCQW/logo-(1).png" 
               alt="Audio Dynamics Core Logo" 
-              className="h-full object-contain drop-shadow-[0_0_10px_rgba(176,38,255,0.2)]"
+              width={160}
+              height={64}
+              className="h-12 sm:h-16 w-auto object-contain drop-shadow-[0_0_10px_rgba(176,38,255,0.2)]"
               referrerPolicy="no-referrer"
             />
           </a>
