@@ -1,14 +1,14 @@
 import { motion } from "motion/react";
-import { Speaker, Music, Mic, Radio } from "lucide-react";
+import { Speaker, Music, Mic, SlidersHorizontal } from "lucide-react";
 import { useLanguage } from "../LanguageContext";
 
 export default function Equipment() {
   const { t } = useLanguage();
 
   const equipment = [
-    { name: "Mixer digital Behringer x32 Compact", icon: Radio },
-    { name: "Mixer digital Behringer x32 Rack", icon: Radio },
-    { name: "Digital Stagebox Behringer SD8", icon: Radio },
+    { name: "Mixer digital Behringer x32 Compact", icon: SlidersHorizontal },
+    { name: "Mixer digital Behringer x32 Rack", icon: SlidersHorizontal },
+    { name: "Digital Stagebox Behringer SD8", icon: SlidersHorizontal },
     { name: "2x Sistem HK Polar 12", icon: Speaker },
     { name: "Subwoofer activ The Box TA18", icon: Speaker },
     { name: "Microfoane Shure SM58", icon: Mic },

@@ -3,6 +3,7 @@ export const translations = {
     nav: {
       services: "Servicii",
       qualities: "Calități",
+      portfolio: "Portofoliu",
       equipment: "Echipament",
       contact: "Contact"
     },
@@ -10,7 +11,7 @@ export const translations = {
       badge: "Sonorizare Profesională 2026",
       title1: "Sunetul din spatele",
       title2: "succesului tău.",
-      subtitle: "Transformăm orice eveniment într-o experiență acustică impecabilă. Oferim soluții complete de sonorizare live pentru concerte, conferințe și evenimente private.",
+      subtitle: "Transformăm orice eveniment într-o experiență acustică impecabilă. Oferim soluții complete de sonorizare live, precum și servicii profesionale de mixing și mastering.",
       quote: "Cere Ofertă",
       services: "Vezi Servicii"
     },
@@ -24,20 +25,33 @@ export const translations = {
       s2_desc: "Sisteme audio impecabile pentru conferințe, prezentări și petreceri de companie. Fără microfonii, doar profesionalism.",
       s3_title: "Petreceri Private & Nunți",
       s3_desc: "Atmosferă perfectă cu un sunet echilibrat, adaptat pentru locația și invitații tăi, ca să te bucuri de fiecare moment.",
-      s4_title: "Mixing Livestream Audio",
-      s4_desc: "Mixaj audio dedicat pentru transmisiuni live. Asigurăm un sunet clar și echilibrat pentru audiența ta online."
+      s4_title: "Mixing & Mastering",
+      s4_desc: "Servicii profesionale de mixing și mastering de studio pentru piese, albume sau înregistrări live. Aducem sunetul tău la standarde de industrie."
     },
     qualities: {
       badge: "De ce noi?",
       title: "Calitățile noastre",
       q1_title: "Consultanță Pre-Eveniment",
       q1_desc: "Analizăm nevoile reale ale evenimentului și oferim consultanță specializată pentru a alege configurația optimă.",
-      q2_title: "Parteneriat cu Artiștii și Trupele",
-      q2_desc: "Suntem interfața tehnică perfectă între tine și artiști. Cunoaștem limbajul tehnic și nevoile trupelor.",
-      q3_title: "Servicii de Streaming Live",
-      q3_desc: "Oferim mai mult decât sunet live; oferim posibilitatea de a transmite momentul sau de a înregistra multitrack.",
+      q2_title: "Atenție la Detalii",
+      q2_desc: "Fiecare frecvență contează. Echilibrăm perfect mixul și eliminăm orice zgomot nedorit pentru a oferi o claritate acustică absolută.",
+      q3_title: "Studio Mixing & Mastering",
+      q3_desc: "Dincolo de scenă, oferim servicii complete de post-producție audio, mixaj și masterizare pentru a-ți finisa proiectele muzicale la cea mai înaltă calitate.",
       q4_title: "Ingineri de sunet dedicați",
       q4_desc: "Asigurăm un sunet clar care se aude bine atât în difuzoarele din sală, cât și în transmisiunile online."
+    },
+    portfolio: {
+      badge: "Proiectele noastre",
+      title: "Portofoliu",
+      tab_live: "Live",
+      tab_studio: "Studio",
+      coming_soon: "În curând...",
+      song_title: "Isus Trăiește",
+      artist_name: "Daniel Părău",
+      listen_spotify: "Spotify",
+      listen_yt: "YouTube Music",
+      mixed_by: "Mixed & Mastered de",
+      image_placeholder: "Aici va fi adăugată poza"
     },
     equipment: {
       badge: "Tehnologie de ultimă oră",
@@ -67,7 +81,7 @@ export const translations = {
       location_label: "Locație"
     },
     footer: {
-      desc: "Transformăm orice eveniment într-o experiență acustică impecabilă. Calitatea sunetului este prioritatea noastră.",
+      desc: "Transformăm orice eveniment într-o experiență acustică impecabilă prin sonorizare live, mixing și mastering. Calitatea sunetului este prioritatea noastră.",
       contact: "Contact",
       social: "Social Media",
       social_desc: "Fii la curent cu activitatea noastră și urmărește-ne pe rețelele sociale.",
@@ -80,6 +94,7 @@ export const translations = {
     nav: {
       services: "Services",
       qualities: "Qualities",
+      portfolio: "Portfolio",
       equipment: "Equipment",
       contact: "Contact"
     },
@@ -87,7 +102,7 @@ export const translations = {
       badge: "Professional Sound 2026",
       title1: "The sound behind",
       title2: "your success.",
-      subtitle: "We transform any event into a flawless acoustic experience. We offer complete live sound solutions for concerts, conferences, and private events.",
+      subtitle: "We transform any event into a flawless acoustic experience. We offer complete live sound solutions, as well as professional mixing and mastering services.",
       quote: "Request Quote",
       services: "View Services"
     },
@@ -101,20 +116,33 @@ export const translations = {
       s2_desc: "Flawless audio systems for conferences, presentations, and company parties. No feedback, just professionalism.",
       s3_title: "Private Parties & Weddings",
       s3_desc: "Perfect atmosphere with balanced sound, tailored to your location and guests, so you can enjoy every moment.",
-      s4_title: "Livestream Audio Mixing",
-      s4_desc: "Dedicated audio mixing for live broadcasts. We ensure clear and balanced sound for your online audience."
+      s4_title: "Mixing & Mastering",
+      s4_desc: "Professional studio mixing and mastering services for tracks, albums, or live recordings. We bring your sound to industry standards."
     },
     qualities: {
       badge: "Why us?",
       title: "Our Qualities",
       q1_title: "Pre-Event Consulting",
       q1_desc: "We analyze the real needs of the event and offer specialized consulting to choose the optimal configuration.",
-      q2_title: "Partnership with Artists and Bands",
-      q2_desc: "We are the perfect technical interface between you and the artists. We know the technical language and the needs of the bands.",
-      q3_title: "Live Streaming Services",
-      q3_desc: "We offer more than live sound; we offer the possibility to broadcast the moment or record multitrack.",
+      q2_title: "Attention to Detail",
+      q2_desc: "Every frequency matters. We perfectly balance the mix and eliminate any unwanted noise to provide absolute acoustic clarity.",
+      q3_title: "Studio Mixing & Mastering",
+      q3_desc: "Beyond the stage, we offer complete audio post-production, mixing, and mastering services to polish your musical projects to the highest quality.",
       q4_title: "Dedicated Sound Engineers",
       q4_desc: "We ensure clear sound that sounds good both in the hall speakers and in online broadcasts."
+    },
+    portfolio: {
+      badge: "Our Projects",
+      title: "Portfolio",
+      tab_live: "Live",
+      tab_studio: "Studio",
+      coming_soon: "Coming soon...",
+      song_title: "Isus Trăiește",
+      artist_name: "Daniel Părău",
+      listen_spotify: "Spotify",
+      listen_yt: "YouTube Music",
+      mixed_by: "Mixed & Mastered by",
+      image_placeholder: "Image will be added here"
     },
     equipment: {
       badge: "Cutting-edge technology",
@@ -144,7 +172,7 @@ export const translations = {
       location_label: "Location"
     },
     footer: {
-      desc: "We transform any event into a flawless acoustic experience. Sound quality is our priority.",
+      desc: "We transform any event into a flawless acoustic experience through live sound, mixing, and mastering. Sound quality is our priority.",
       contact: "Contact",
       social: "Social Media",
       social_desc: "Stay up to date with our activity and follow us on social media.",

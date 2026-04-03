@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Mic2, PartyPopper, Briefcase, Radio } from "lucide-react";
+import { Mic2, PartyPopper, Briefcase, SlidersHorizontal } from "lucide-react";
 import { useLanguage } from "../LanguageContext";
 
 export default function Services() {
@@ -24,7 +24,7 @@ export default function Services() {
     {
       title: t('services.s4_title'),
       description: t('services.s4_desc'),
-      icon: Radio,
+      icon: SlidersHorizontal,
     }
   ];
 

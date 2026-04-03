@@ -1,4 +1,5 @@
-import { motion } from "motion/react";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "../LanguageContext";
 
@@ -11,7 +12,7 @@ const Equalizer = () => {
   }));
 
   return (
-    <div className="absolute bottom-0 left-0 right-0 flex items-end justify-center opacity-30 -z-10 overflow-hidden h-1/2 pointer-events-none">
+    <div className="absolute bottom-0 left-0 right-0 flex items-end justify-center opacity-30 overflow-hidden h-1/2 pointer-events-none">
       <div className="flex items-end gap-1 md:gap-2 w-full max-w-7xl px-4 h-full">
         {bars.map((bar) => (
           <motion.div
@@ -37,24 +38,44 @@ const Equalizer = () => {
 
 export default function Hero() {
   const { t } = useLanguage();
+  const ref = useRef<HTMLElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"]
+  });
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center pt-28 pb-20 px-4 sm:px-6 overflow-hidden">
-      {/* Animated Background Glow */}
-      <motion.div
-        animate={{ 
-          scale: [1, 1.2, 1], 
-          opacity: [0.3, 0.5, 0.3],
-          rotate: [0, 90, 0]
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-accent/20 blur-[100px] md:blur-[120px] rounded-full -z-20 pointer-events-none will-change-transform"
-      />
+    <section ref={ref} className="relative min-h-[100dvh] flex flex-col items-center justify-center pt-28 pb-20 px-4 sm:px-6 overflow-hidden">
       
-      {/* Audio Equalizer Effect */}
-      <Equalizer />
+      {/* Parallax Background Container */}
+      <motion.div 
+        style={{ y: backgroundY }} 
+        className="absolute inset-0 -z-20 pointer-events-none"
+      >
+        {/* Animated Background Glow */}
+        <motion.div
+          animate={{ 
+            scale: [1, 1.2, 1], 
+            opacity: [0.3, 0.5, 0.3],
+            rotate: [0, 90, 0]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-accent/20 blur-[100px] md:blur-[120px] rounded-full will-change-transform"
+        />
+        
+        {/* Audio Equalizer Effect */}
+        <Equalizer />
+      </motion.div>
       
-      <div className="max-w-5xl w-full text-center space-y-8 md:space-y-10 z-10">
+      <motion.div 
+        style={{ y: textY, opacity }}
+        className="max-w-5xl w-full text-center space-y-8 md:space-y-10 z-10"
+      >
         <motion.div
           initial={{ y: 20 }}
           animate={{ y: 0 }}
@@ -96,11 +117,12 @@ export default function Hero() {
             {t('hero.services')}
           </a>
         </motion.div>
-      </div>
+      </motion.div>
       
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        style={{ opacity }}
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-10"
       >

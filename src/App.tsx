@@ -10,6 +10,7 @@ const Qualities = lazy(() => import("./components/Qualities"));
 const Services = lazy(() => import("./components/Services"));
 const DividerQuote = lazy(() => import("./components/DividerQuote"));
 const SectionTransition = lazy(() => import("./components/SectionTransition"));
+const Portfolio = lazy(() => import("./components/Portfolio"));
 const Equipment = lazy(() => import("./components/Equipment"));
 const InstagramPromo = lazy(() => import("./components/InstagramPromo"));
 const CallToAction = lazy(() => import("./components/CallToAction"));
@@ -30,6 +31,7 @@ export default function App() {
           <DividerQuote />
           <SectionTransition />
           <Qualities />
+          <Portfolio />
           <Equipment />
           <InstagramPromo />
           <CallToAction />

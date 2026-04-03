@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Users, Radio, Mic2, MessageSquare } from "lucide-react";
+import { Sliders, AudioWaveform, Mic2, MessageSquare, ArrowRight } from "lucide-react";
 import { useLanguage } from "../LanguageContext";
 
 export default function Qualities() {
@@ -14,12 +14,12 @@ export default function Qualities() {
     {
       title: t('qualities.q2_title'),
       description: t('qualities.q2_desc'),
-      icon: Users,
+      icon: Sliders,
     },
     {
       title: t('qualities.q3_title'),
       description: t('qualities.q3_desc'),
-      icon: Radio,
+      icon: AudioWaveform,
     },
     {
       title: t('qualities.q4_title'),
@@ -29,50 +29,83 @@ export default function Qualities() {
   ];
 
   return (
-    <section id="calitati" className="py-20 md:py-32 px-6 bg-charcoal/30">
-      <div className="max-w-7xl mx-auto space-y-12 md:space-y-20">
-        <div className="text-center space-y-4">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            className="text-accent text-xs md:text-sm font-mono tracking-[0.2em] uppercase"
-          >
-            {t('qualities.badge')}
-          </motion.span>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white"
-          >
-            {t('qualities.title')}
-          </motion.h2>
-        </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {qualities.map((quality, index) => (
-            <motion.div
-              key={index}
+    <section id="calitati" className="py-20 md:py-32 px-6 relative z-10">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+          
+          {/* Left Side: Sticky Header */}
+          <div className="lg:w-1/3 lg:sticky lg:top-32 space-y-6">
+            <motion.span
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -8 }}
               viewport={{ once: true, amount: 0.1 }}
-              transition={{ delay: index * 0.1, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="p-6 md:p-8 glass border border-white/5 rounded-3xl hover:border-accent/30 hover:shadow-[0_10px_30px_rgba(176,38,255,0.1)] transition-all duration-300 group"
+              className="inline-block px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs md:text-sm font-bold tracking-widest uppercase"
             >
-              <div className="w-12 h-12 md:w-14 md:h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                <quality.icon className="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-white transition-colors duration-300" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-white mb-3 md:mb-4 leading-tight">
-                {quality.title}
-              </h3>
-              <p className="text-sm md:text-base text-gray-400 font-light leading-relaxed">
-                {quality.description}
-              </p>
+              {t('qualities.badge')}
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[1.1]"
+            >
+              {t('qualities.title')}
+            </motion.h2>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="hidden lg:flex w-16 h-16 rounded-full bg-white/5 items-center justify-center border border-white/10 mt-8"
+            >
+              <ArrowRight className="w-6 h-6 text-gray-500" />
             </motion.div>
-          ))}
+          </div>
+
+          {/* Right Side: Compact List in Glass Card */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:w-2/3 w-full glass rounded-3xl border border-white/5 p-6 md:p-10 shadow-2xl"
+          >
+            <div className="flex flex-col">
+              {qualities.map((quality, index) => (
+                <div
+                  key={index}
+                  className="group flex flex-col sm:flex-row gap-6 py-8 border-b border-white/5 first:pt-0 last:pb-0 last:border-0"
+                >
+                  {/* Icon & Number */}
+                  <div className="flex items-center sm:items-start justify-between sm:justify-start gap-6 sm:w-20 shrink-0">
+                    <div className="w-14 h-14 rounded-2xl bg-black/40 border border-white/5 flex items-center justify-center group-hover:bg-accent/20 group-hover:border-accent/30 transition-all duration-500 shadow-inner">
+                      <quality.icon className="w-6 h-6 text-gray-400 group-hover:text-accent transition-colors duration-500" />
+                    </div>
+                    <span className="text-4xl font-black text-white/5 group-hover:text-white/20 transition-colors duration-500 sm:hidden">
+                      0{index + 1}
+                    </span>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="space-y-3 flex-1">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-accent transition-colors duration-300">
+                        {quality.title}
+                      </h3>
+                      <span className="hidden sm:block text-4xl font-black text-white/5 group-hover:text-white/10 transition-colors duration-500">
+                        0{index + 1}
+                      </span>
+                    </div>
+                    <p className="text-base text-gray-400 leading-relaxed font-medium">
+                      {quality.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </section>

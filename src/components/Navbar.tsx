@@ -30,6 +30,7 @@ export default function Navbar() {
           </button>
           <div className="hidden md:flex items-center gap-8">
             <a href="#calitati" className="hover:text-accent transition-colors">{t('nav.qualities')}</a>
+            <a href="#portofoliu" className="hover:text-accent transition-colors">{t('nav.portfolio')}</a>
             <a href="#servicii" className="hover:text-accent transition-colors">{t('nav.services')}</a>
             <a href="#echipament" className="hover:text-accent transition-colors">{t('nav.equipment')}</a>
           </div>
@@ -84,6 +85,7 @@ export default function Navbar() {
           >
             <div className="flex flex-col gap-6 text-xl font-medium tracking-widest uppercase">
               <a href="#calitati" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">{t('nav.qualities')}</a>
+              <a href="#portofoliu" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">{t('nav.portfolio')}</a>
               <a href="#servicii" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">{t('nav.services')}</a>
               <a href="#echipament" onClick={() => setIsOpen(false)} className="hover:text-accent transition-colors">{t('nav.equipment')}</a>
               <a href="#contact-box" onClick={() => setIsOpen(false)} className="text-accent hover:text-accent-hover transition-colors">{t('nav.contact')}</a>
