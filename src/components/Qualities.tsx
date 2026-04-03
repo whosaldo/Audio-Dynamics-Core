@@ -44,7 +44,7 @@ export default function Qualities() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white"
           >
             {t('qualities.title')}
@@ -59,7 +59,7 @@ export default function Qualities() {
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ y: -8 }}
               viewport={{ once: true, amount: 0.1 }}
-              transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
+              transition={{ delay: index * 0.1, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="p-6 md:p-8 glass border border-white/5 rounded-3xl hover:border-accent/30 hover:shadow-[0_10px_30px_rgba(176,38,255,0.1)] transition-all duration-300 group"
             >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">

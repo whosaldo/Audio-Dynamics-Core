@@ -39,7 +39,7 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-28 pb-20 px-4 sm:px-6 overflow-hidden">
+    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center pt-28 pb-20 px-4 sm:px-6 overflow-hidden">
       {/* Animated Background Glow */}
       <motion.div
         animate={{ 
@@ -56,18 +56,18 @@ export default function Hero() {
       
       <div className="max-w-5xl w-full text-center space-y-8 md:space-y-10 z-10">
         <motion.div
-          initial={{ opacity: 0.01, y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="inline-block px-4 py-1.5 md:py-2 rounded-full glass border border-accent/30 text-accent text-xs md:text-sm font-mono tracking-[0.15em] md:tracking-[0.2em] uppercase shadow-[0_0_15px_rgba(176,38,255,0.2)]"
         >
           {t('hero.badge')}
         </motion.div>
         
         <motion.h1
-          initial={{ opacity: 0.01, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-tight md:leading-[0.9] text-gradient px-2"
         >
           {t('hero.title1')} <br className="hidden sm:block" />
@@ -75,18 +75,18 @@ export default function Hero() {
         </motion.h1>
         
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 font-light leading-relaxed px-4 sm:px-0"
         >
           {t('hero.subtitle')}
         </motion.p>
         
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 md:pt-8 w-full px-4 sm:px-0"
         >
           <a href="#contact-box" className="w-full max-w-[220px] sm:max-w-none sm:w-auto px-5 py-2.5 sm:px-8 sm:py-4 bg-accent text-white rounded-full font-bold text-sm sm:text-base md:text-lg hover:bg-accent-hover transition-all accent-glow hover:scale-105 active:scale-95 text-center">

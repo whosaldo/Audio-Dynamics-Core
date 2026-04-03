@@ -15,7 +15,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-transparent selection:bg-accent/30 selection:text-accent relative">
+    <div className="min-h-[100dvh] bg-transparent selection:bg-accent/30 selection:text-accent relative">
       <AnimatedBackground />
       <header>
         <Navbar />

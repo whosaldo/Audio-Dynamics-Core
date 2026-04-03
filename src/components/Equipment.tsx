@@ -34,7 +34,7 @@ export default function Equipment() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.1 }}
-              transition={{ delay: 0.1 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white"
             >
               {t('equipment.title')}
@@ -43,7 +43,7 @@ export default function Equipment() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.1 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.1, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="text-gray-400 text-base md:text-lg font-light leading-relaxed"
             >
               {t('equipment.subtitle')} <span className="text-white font-bold">{t('equipment.capacity')}</span>
@@ -55,6 +55,7 @@ export default function Equipment() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="w-full lg:w-auto px-6 py-5 md:px-8 md:py-6 bg-charcoal/80 border border-white/5 rounded-3xl flex items-center gap-5 md:gap-6"
           >
             <div className="w-10 h-10 md:w-12 md:h-12 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
@@ -74,7 +75,7 @@ export default function Equipment() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
-              transition={{ delay: index * 0.05 }}
+              transition={{ delay: index * 0.05, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="px-4 py-3 md:px-6 md:py-4 bg-charcoal/80 border border-white/5 rounded-2xl flex items-center gap-3 md:gap-4 hover:border-accent/30 transition-all group cursor-default w-full sm:w-auto"
             >
               <item.icon className="w-4 h-4 md:w-5 md:h-5 text-gray-500 group-hover:text-accent transition-colors shrink-0" />

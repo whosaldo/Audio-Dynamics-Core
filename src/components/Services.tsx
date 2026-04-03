@@ -44,7 +44,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white"
           >
             {t('services.title')}
@@ -53,7 +53,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.1, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="text-gray-400 text-base md:text-lg font-light leading-relaxed"
           >
             {t('services.subtitle')}
@@ -68,7 +68,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ y: -8 }}
               viewport={{ once: true, amount: 0.1 }}
-              transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
+              transition={{ delay: index * 0.1, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="glass p-8 md:p-10 rounded-3xl border border-white/5 hover:border-accent/30 hover:shadow-[0_10px_30px_rgba(176,38,255,0.1)] transition-all duration-300 group"
             >
               <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-accent transition-all duration-300">
