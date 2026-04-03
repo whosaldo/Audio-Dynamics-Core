@@ -11,7 +11,7 @@ export default function CallToAction() {
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="glass rounded-[3rem] p-10 md:p-20 border border-accent/20 text-center relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-accent/5" />

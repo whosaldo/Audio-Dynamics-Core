@@ -11,7 +11,7 @@ export default function ContactBox() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="glass rounded-[2rem] p-8 md:p-12 border border-white/10 relative overflow-hidden"
         >
           {/* Background Glow */}

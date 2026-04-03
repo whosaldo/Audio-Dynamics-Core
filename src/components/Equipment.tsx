@@ -25,7 +25,7 @@ export default function Equipment() {
             <motion.span
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               className="text-accent text-xs md:text-sm font-mono tracking-[0.2em] uppercase"
             >
               {t('equipment.badge')}
@@ -33,7 +33,7 @@ export default function Equipment() {
             <motion.h2
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white"
             >
@@ -42,7 +42,7 @@ export default function Equipment() {
             <motion.p
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: 0.2 }}
               className="text-gray-400 text-base md:text-lg font-light leading-relaxed"
             >
@@ -54,7 +54,7 @@ export default function Equipment() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.1 }}
             className="w-full lg:w-auto px-6 py-5 md:px-8 md:py-6 bg-charcoal/80 border border-white/5 rounded-3xl flex items-center gap-5 md:gap-6"
           >
             <div className="w-10 h-10 md:w-12 md:h-12 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
@@ -73,7 +73,7 @@ export default function Equipment() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: index * 0.05 }}
               className="px-4 py-3 md:px-6 md:py-4 bg-charcoal/80 border border-white/5 rounded-2xl flex items-center gap-3 md:gap-4 hover:border-accent/30 transition-all group cursor-default w-full sm:w-auto"
             >
