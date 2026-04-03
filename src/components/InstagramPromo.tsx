@@ -25,6 +25,7 @@ export default function InstagramPromo() {
             href="https://instagram.com/audio.dynamics.core" 
             target="_blank" 
             rel="noreferrer"
+            aria-label="Urmărește-ne pe Instagram"
             className="inline-flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white font-bold rounded-xl hover:opacity-90 transition-all hover:scale-105 mt-2 shadow-lg shadow-orange-500/20"
           >
             <Instagram className="w-5 h-5" />
@@ -40,6 +41,7 @@ export default function InstagramPromo() {
               href="https://instagram.com/audio.dynamics.core"
               target="_blank"
               rel="noreferrer"
+              aria-label="Vezi postarea pe Instagram"
               className={`aspect-square rounded-2xl overflow-hidden relative group border border-white/10 ${index === 2 ? 'hidden sm:block' : ''}`}
             >
               <img 

@@ -17,8 +17,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-transparent selection:bg-accent/30 selection:text-accent relative">
       <AnimatedBackground />
-      <Navbar />
-      <main>
+      <header>
+        <Navbar />
+      </header>
+      <main id="main-content">
         <Hero />
         <Services />
         <DividerQuote />

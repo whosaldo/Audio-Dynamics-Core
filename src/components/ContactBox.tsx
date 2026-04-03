@@ -31,6 +31,7 @@ export default function ContactBox() {
               {/* Phone Numbers */}
               <a 
                 href="tel:+40753792339" 
+                aria-label="Sună-ne la +40 753 792 339"
                 className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3 px-4 py-4 md:px-6 md:py-4 glass border border-white/10 rounded-xl hover:border-accent/50 hover:bg-white/5 transition-all group flex-1 md:flex-none"
               >
                 <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors shrink-0">
@@ -43,6 +44,7 @@ export default function ContactBox() {
               </a>
               <a 
                 href="tel:+40740456079" 
+                aria-label="Sună-ne la +40 740 456 079"
                 className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3 px-4 py-4 md:px-6 md:py-4 glass border border-white/10 rounded-xl hover:border-accent/50 hover:bg-white/5 transition-all group flex-1 md:flex-none"
               >
                 <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors shrink-0">
@@ -57,6 +59,7 @@ export default function ContactBox() {
               {/* Email */}
               <a 
                 href="mailto:contact@audio-dynamics-core.ro" 
+                aria-label="Trimite-ne un email la contact@audio-dynamics-core.ro"
                 className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3 px-4 py-4 md:px-6 md:py-4 glass border border-white/10 rounded-xl hover:border-accent/50 hover:bg-white/5 transition-all group flex-1 md:flex-none"
               >
                 <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors shrink-0">
