@@ -35,14 +35,6 @@ export default function Qualities() {
           
           {/* Left Side: Sticky Header */}
           <div className="lg:w-1/3 lg:sticky lg:top-32 space-y-6">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              className="inline-block px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs md:text-sm font-bold tracking-widest uppercase"
-            >
-              {t('qualities.badge')}
-            </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +42,7 @@ export default function Qualities() {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[1.1]"
             >
-              {t('qualities.title')}
+              {t('qualities.title')}<span className="text-accent">?</span>
             </motion.h2>
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}

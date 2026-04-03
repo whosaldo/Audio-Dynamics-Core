@@ -30,7 +30,7 @@ export const translations = {
     },
     qualities: {
       badge: "De ce noi?",
-      title: "Calitățile noastre",
+      title: "De ce ADC",
       q1_title: "Consultanță Pre-Eveniment",
       q1_desc: "Analizăm nevoile reale ale evenimentului și oferim consultanță specializată pentru a alege configurația optimă.",
       q2_title: "Atenție la Detalii",
@@ -121,7 +121,7 @@ export const translations = {
     },
     qualities: {
       badge: "Why us?",
-      title: "Our Qualities",
+      title: "Why ADC",
       q1_title: "Pre-Event Consulting",
       q1_desc: "We analyze the real needs of the event and offer specialized consulting to choose the optimal configuration.",
       q2_title: "Attention to Detail",
